@@ -48,10 +48,10 @@ HTML = """<!DOCTYPE html>
                     <div class="d-flex gap-2 mt-auto">
                         <button class="btn btn-success flex-grow-1"
                                 onclick="wake('{{ d.mac }}', this)">Wake</button>
-                        <button class="btn btn-outline-light btn-sm px-2" title="Edytuj"
-                                onclick="openModal('{{ d.name }}', '{{ d.mac }}')"><i class="bi bi-pencil"></i></button>
-                        <button class="btn btn-outline-danger btn-sm px-2" title="Usuń"
-                                onclick="openDeleteModal('{{ d.name }}', '{{ d.mac }}')"><i class="bi bi-trash"></i></button>
+                        <button class="btn btn-light btn-sm px-3" title="Edytuj"
+                                onclick="openModal('{{ d.name }}', '{{ d.mac }}')"><i class="bi bi-pencil-fill"></i></button>
+                        <button class="btn btn-danger btn-sm px-3" title="Usuń"
+                                onclick="openDeleteModal('{{ d.name }}', '{{ d.mac }}')"><i class="bi bi-trash-fill"></i></button>
                     </div>
                 </div>
             </div>
