@@ -25,7 +25,9 @@ sudo cp app.py /opt/wolweb/
 # Skonfiguruj urządzenia
 sudo mkdir -p /etc/wolweb
 sudo cp devices.example.json /etc/wolweb/devices.json
-sudo nano /etc/wolweb/devices.json
+
+# ⚠️ Daj uprawnienia zapisu użytkownikowi który uruchamia serwis
+sudo chown mateusz:mateusz /etc/wolweb/devices.json
 
 # Zainstaluj jako systemd service
 sudo cp wolweb.service /etc/systemd/system/
@@ -37,7 +39,7 @@ Panel dostępny na `http://<ip-rpi>:8089`
 
 ## Konfiguracja urządzeń
 
-Edytuj `/etc/wolweb/devices.json`:
+Edytuj `/etc/wolweb/devices.json` lub użyj panelu webowego (przycisk **+ Dodaj**):
 
 ```json
 {
@@ -55,3 +57,10 @@ Edytuj `/etc/wolweb/devices.json`:
 ```
 
 > `devices.json` jest w `.gitignore` — MACi urządzeń nie trafiają do repo.
+
+## Funkcje
+
+- ⚡ **Wake** — wyślij magic packet do urządzenia
+- ✏️ **Edytuj** — zmień nazwę lub MAC urządzenia
+- 🗑️ **Usuń** — usuń urządzenie z listy
+- **+ Dodaj** — dodaj nowe urządzenie przez panel (bez edycji pliku)
