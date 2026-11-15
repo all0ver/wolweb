@@ -25,6 +25,7 @@ HTML = """<!DOCTYPE html>
     <title>Wake on LAN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-light">
 <div class="container py-5">
@@ -47,10 +48,10 @@ HTML = """<!DOCTYPE html>
                     <div class="d-flex gap-2 mt-auto">
                         <button class="btn btn-success flex-grow-1"
                                 onclick="wake('{{ d.mac }}', this)">Wake</button>
-                        <button class="btn btn-outline-light" title="Edytuj"
-                                onclick="openModal('{{ d.name }}', '{{ d.mac }}')">&#9998;</button>
-                        <button class="btn btn-outline-danger" title="Usuń"
-                                onclick="openDeleteModal('{{ d.name }}', '{{ d.mac }}')">&#128465;</button>
+                        <button class="btn btn-outline-light btn-sm px-2" title="Edytuj"
+                                onclick="openModal('{{ d.name }}', '{{ d.mac }}')"><i class="bi bi-pencil"></i></button>
+                        <button class="btn btn-outline-danger btn-sm px-2" title="Usuń"
+                                onclick="openDeleteModal('{{ d.name }}', '{{ d.mac }}')"><i class="bi bi-trash"></i></button>
                     </div>
                 </div>
             </div>
